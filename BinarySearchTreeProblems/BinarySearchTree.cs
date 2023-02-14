@@ -26,6 +26,7 @@ namespace BinarySearchTreeProblems
             {
                 if (this.LeftTree == null)
                 {
+                    this.leftCount++;
                     this.LeftTree = new BinarySearchTree<T>(item);
                 }
                 else
@@ -37,6 +38,7 @@ namespace BinarySearchTreeProblems
             {
                 if (this.RightTree == null)
                 {
+                    this.rightCount++;
                     this.RightTree = new BinarySearchTree<T>(item);
                 }
                 else
@@ -47,19 +49,17 @@ namespace BinarySearchTreeProblems
         }
         public void GetSize()
         {
-            Console.WriteLine("Size " + " " + (1 + this.leftCount + this.rightCount));
+            Console.WriteLine("Number of element in BST " + " " + (1 + this.leftCount + this.rightCount));
         }
         public void Display()
         {
             if (this.LeftTree != null)
             {
-                this.leftCount++;
                 this.LeftTree.Display();
             }
             Console.WriteLine(this.NodeData.ToString());
             if (this.RightTree != null)
             {
-                this.rightCount++;
                 this.RightTree.Display();
             }
         }
