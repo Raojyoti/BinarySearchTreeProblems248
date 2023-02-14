@@ -19,6 +19,7 @@ namespace BinarySearchTreeProblems
                 Console.WriteLine("1.Insert value in BST\n" +
                     "2.Display\n" +
                     "3.Get size of BST\n" +
+                    "4.Search element of BST\n" +
                     "6.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
