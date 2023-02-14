@@ -19,6 +19,7 @@ namespace BinarySearchTreeProblems
             this.RightTree = null;
         }
         public int leftCount = 0, rightCount = 0;
+        public bool result = false;
         public void Insert(T item)
         {
             T currentNodeValue = this.NodeData;
@@ -62,6 +63,31 @@ namespace BinarySearchTreeProblems
             {
                 this.RightTree.Display();
             }
+        }
+        public bool IfExits(T element, BinarySearchTree<T> node)
+        {
+            if (node == null)
+            {
+                return false;
+            }
+            if (node.NodeData.Equals(element))
+            {
+                Console.WriteLine("Found the element in BST is:  " + node.NodeData);
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Current element is {0} in BST", node.NodeData);
+            }
+            if (element.CompareTo(node.NodeData) < 0)
+            {
+                IfExits(element, node.LeftTree);
+            }
+            if (element.CompareTo(node.NodeData) > 0)
+            {
+                IfExits(element, node.RightTree);
+            }
+            return result;
         }
     }
 }

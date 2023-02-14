@@ -51,6 +51,13 @@ namespace BinarySearchTreeProblems
                         tree.GetSize();
                         Console.Write("\nPress any key to continue...... ");
                         break;
+                    case 4:
+                        Console.Clear();
+                        Console.Write("Enter the element which you want to search: ");
+                        int element = Convert.ToInt32(Console.ReadLine());
+                        tree.IfExits(element, tree);
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
                     case 6:
                         Console.Clear();
                         break;
