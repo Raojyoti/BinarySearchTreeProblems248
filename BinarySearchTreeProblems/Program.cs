@@ -18,6 +18,7 @@ namespace BinarySearchTreeProblems
                 Console.WriteLine("Please select given options");
                 Console.WriteLine("1.Insert value in BST\n" +
                     "2.Display\n" +
+                    "3.Get size of BST\n" +
                     "6.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -36,11 +37,18 @@ namespace BinarySearchTreeProblems
                             int data = Convert.ToInt32(Console.ReadLine());
                             tree.Insert(data);
                         }
+                        //tree.Display();
+                        //tree.GetSize();
                         Console.Write("\nPress any key to continue...... ");
                         break;
                     case 2:
                         Console.Clear();
                         tree.Display();
+                        Console.Write("\nPress any key to continue...... ");
+                        break;
+                    case 3:
+                        Console.Clear();
+                        tree.GetSize();
                         Console.Write("\nPress any key to continue...... ");
                         break;
                     case 6:

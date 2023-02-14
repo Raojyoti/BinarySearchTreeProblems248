@@ -18,6 +18,7 @@ namespace BinarySearchTreeProblems
             this.LeftTree = null;
             this.RightTree = null;
         }
+        public int leftCount = 0, rightCount = 0;
         public void Insert(T item)
         {
             T currentNodeValue = this.NodeData;
@@ -44,15 +45,21 @@ namespace BinarySearchTreeProblems
                 }
             }
         }
+        public void GetSize()
+        {
+            Console.WriteLine("Size " + " " + (1 + this.leftCount + this.rightCount));
+        }
         public void Display()
         {
             if (this.LeftTree != null)
             {
+                this.leftCount++;
                 this.LeftTree.Display();
             }
             Console.WriteLine(this.NodeData.ToString());
             if (this.RightTree != null)
             {
+                this.rightCount++;
                 this.RightTree.Display();
             }
         }
